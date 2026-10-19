@@ -1,106 +1,51 @@
 <!DOCTYPE html>
+2
 <html lang="es">
+3
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Calculadora de notas</title>
-  <!-- Aquí conectamos el archivo CSS externo -->
-  <link rel="stylesheet" href="estilos.css">
+4
+<meta charset="UTF-8">
+5
+<title>Calculadora de Notas</title>
+6
+Estilos.css
+7
 </head>
+8
 <body>
-  <main>
-    <h1>Calculadora de notas</h1>
-    <p class="sub">Ingresa tus notas y calcula el promedio. Se aprueba con 3.0 o más.</p>
-
-    <label for="cantidad">¿Cuántas notas vas a ingresar?</label>
-    <input type="number" id="cantidad" min="1" max="20" step="1" inputmode="numeric">
-
-    <button type="button" id="crear">Crear campos</button>
-
-    <div id="campos"></div>
-    <button type="button" id="calcular" style="display:none">Calcular promedio</button>
-
-    <div id="error" role="alert"></div>
-
-    <section id="resultado" aria-live="polite">
-      <h2>Resultado</h2>
-      <p id="notas"></p>
-      <p id="promedio"></p>
-      <div id="estado"></div>
-    </section>
-  </main>
-
-  <script>
-    const cantidadInput = document.getElementById("cantidad");
-    const campos = document.getElementById("campos");
-    const btnCalcular = document.getElementById("calcular");
-    const errorBox = document.getElementById("error");
-    const resultado = document.getElementById("resultado");
-
-    // Paso 1: captura de notas
-    document.getElementById("crear").addEventListener("click", () => {
-      errorBox.textContent = "";
-      resultado.style.display = "none";
-      const cantidad = parseInt(cantidadInput.value, 10);
-
-      if (!Number.isInteger(cantidad) || cantidad < 1 || cantidad > 20) {
-        errorBox.textContent = "Escribe una cantidad entre 1 y 20.";
-        campos.innerHTML = "";
-        btnCalcular.style.display = "none";
-        return;
-      }
-
-      campos.innerHTML = "";
-      for (let i = 1; i <= cantidad; i++) {
-        const div = document.createElement("div");
-        div.innerHTML =
-          `<label for="nota${i}">Nota ${i}</label>` +
-          `<input type="number" id="nota${i}" class="nota" min="0" max="5" step="0.1" inputmode="decimal">`;
-        campos.appendChild(div);
-      }
-      btnCalcular.style.display = "block";
-      
-      const primerInput = document.getElementById("nota1");
-      if(primerInput) primerInput.focus();
-    });
-
-    // Paso 2 y 3: promedio, resultado y evaluación
-    btnCalcular.addEventListener("click", () => {
-      errorBox.textContent = "";
-      const inputs = document.querySelectorAll(".nota");
-      
-      if (inputs.length === 0) return;
-
-      const valores = [...inputs].map(i => parseFloat(i.value));
-
-      if (valores.some(n => Number.isNaN(n))) {
-        errorBox.textContent = "Completa todas las notas con números.";
-        resultado.style.display = "none";
-        return;
-      }
-      if (valores.some(n => n < 0 || n > 5)) {
-        errorBox.textContent = "Las notas deben estar entre 0 y 5.";
-        resultado.style.display = "none";
-        return;
-      }
-
-      const promedio = valores.reduce((a, b) => a + b, 0) / valores.length;
-      const estado = document.getElementById("estado");
-
-      document.getElementById("notas").textContent = "Notas ingresadas: " + valores.join(", ");
-      document.getElementById("promedio").textContent = "Promedio final: " + promedio.toFixed(2);
-
-      estado.className = ""; 
-      
-      if (promedio >= 3.0) {
-        estado.textContent = "✅ ¡Aprobado!";
-        estado.classList.add("aprobado");
-      } else {
-        estado.textContent = "❌ Reprobado.";
-        estado.classList.add("reprobado");
-      }
-      resultado.style.display = "block";
-    });
-  </script>
+9
+ 
+10
+<div class="contenedor">
+11
+<h1>📚 Calculadora de Notas</h1>
+12
+ 
+13
+<p>Ingresa tus notas y calcula el promedio automáticamente.</p>
+14
+ 
+15
+<label>¿Cuántas notas vas a ingresar?</label>
+16
+<input type="number" id="cantidad">
+17
+ 
+18
+<button>Crear campos</button>
+19
+ 
+20
+<h2>Resultado</h2>
+21
+ 
+22
+<div id="resultado"></div>
+23
+</div>
+24
+ 
+25
 </body>
+26
 </html>
