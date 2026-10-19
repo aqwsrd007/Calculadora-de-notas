@@ -1,105 +1,47 @@
 body {
 2
-font-family: Arial, sans-serif;
-3
-background: linear-gradient(135deg, #1e3c72, #2a5298);
-4
 margin: 0;
+3
+font-family: Arial, sans-serif;
+4
+background-color: #f4f6f9;
 5
-padding: 0;
+text-align: center;
 6
 }
 7
  
 8
-.contenedor {
+.banner {
 9
-max-width: 800px;
+width: 100%;
 10
-margin: 50px auto;
+max-height: 400px;
 11
-background: white;
+object-fit: cover;
 12
-padding: 30px;
+display: block;
 13
-border-radius: 15px;
+}
 14
-box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+ 
 15
-}
-16
- 
-17
 h1 {
-18
-text-align: center;
-19
+16
 color: #1e3c72;
-20
-}
-21
- 
-22
-p {
-23
-text-align: center;
-24
-color: #555;
-25
-}
-26
- 
-27
-input {
-28
-padding: 10px;
-29
-border: 1px solid #ccc;
-30
-border-radius: 8px;
-31
-margin: 5px;
-32
-}
-33
- 
-34
-button {
-35
-background: #1e3c72;
-36
-color: white;
-37
-border: none;
-38
-padding: 10px 15px;
-39
-border-radius: 8px;
-40
-cursor: pointer;
-41
-}
-42
- 
-43
-button:hover {
-44
-background: #2a5298;
-45
-}
-46
- 
-47
-#resultado {
-48
+17
 margin-top: 20px;
-49
-font-size: 20px;
-50
-font-weight: bold;
-51
-text-align: center;
-52
+18
+font-size: 42px;
+19
 }
-53
-`
+20
+ 
+21
+p {
+22
+font-size: 20px;
+23
+color: #555;
+24
+}
