@@ -1,12 +1,13 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-
     background-image: url("study.png");
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: center;
+}
+
+h1 {
+    color: blue;
 }
 
 .contenedor {
