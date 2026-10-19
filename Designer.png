@@ -1,38 +1,33 @@
 <!DOCTYPE html>
-2
+
 <html lang="es">
-3
+
 <head>
-4
+
 <meta charset="UTF-8">
-5
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-6
+
 <title>Calculadora de Notas</title>
-7
+
  
-8
 Estilos.css
-9
+
 </head>
-10
+
 <body>
-11
+
  
-12
 <!-- Banner -->
-13
+
 <img src="Imag.png"Título -->
-14
+
 <h1>📚 Calculadora de Notas</h1>
-15
- 
-16
+
+
 <p>Ingresa tus notas y calcula el promedio. Se aprueba con 3.0 o más.</p>
-17
  
-18
 </body>
-19
+
 </html>
-20
+
