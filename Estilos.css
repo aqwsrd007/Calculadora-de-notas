@@ -1,141 +1,71 @@
 body {
-2
-margin: 0;
-3
-font-family: 'Segoe UI', sans-serif;
-4
- 
-5
-background-image: url("study.png");
-6
-background-size: cover;
-7
-background-position: center;
-8
-background-repeat: no-repeat;
-9
-background-attachment: fixed;
-10
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    background-image: url("study.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-11
- 
-12
+
 .contenedor {
-13
-max-width: 850px;
-14
-margin: 50px auto;
-15
-padding: 30px;
-16
- 
-17
-background: rgba(255, 255, 255, 0.95);
-18
- 
-19
-border-radius: 20px;
-20
- 
-21
-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-22
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
-23
- 
-24
+
 h1 {
-25
-color: #0d47a1;
-26
-font-size: 48px;
-27
-font-weight: bold;
-28
+    color: #0d47a1;
+    font-size: 48px;
+    font-weight: bold;
 }
-29
- 
-30
+
 h2 {
-31
-color: #1565c0;
-32
-font-size: 38px;
-33
+    color: #1565c0;
+    font-size: 38px;
 }
-34
- 
-35
+
 p {
-36
-color: #37474f;
-37
-font-size: 24px;
-38
+    color: #37474f;
+    font-size: 24px;
 }
-39
- 
-40
+
 label {
-41
-color: #263238;
-42
-font-size: 28px;
-43
-font-weight: bold;
-44
+    color: #263238;
+    font-size: 28px;
+    font-weight: bold;
 }
-45
- 
-46
+
 input {
-47
-padding: 10px;
-48
-border-radius: 10px;
-49
-border: 2px solid #90caf9;
-50
-font-size: 18px;
-51
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #90caf9;
+    font-size: 18px;
 }
-52
- 
-53
+
 button {
-54
-background: #1565c0;
-55
-color: white;
-56
-border: none;
-57
-padding: 12px 18px;
-58
-border-radius: 10px;
-59
-font-size: 16px;
-60
-cursor: pointer;
-61
+    background: #1565c0;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
 }
-62
- 
-63
+
 button:hover {
-64
-background: #0d47a1;
-65
+    background: #0d47a1;
 }
-66
- 
-67
+
 #resultado {
-68
-color: #1b5e20;
-69
-font-size: 30px;
-70
-font-weight: bold;
-71
+    color: #1b5e20;
+    font-size: 30px;
+    font-weight: bold;
 }
